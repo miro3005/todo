@@ -6,7 +6,7 @@ class DeleteTodo extends Dbc {
 
         if (isset($_POST['delete_todo'])) {
 
-            // GET SELECTED TODO
+            // GET USER SELECTION
             $deletetodo = mysqli_real_escape_string($this->connect(), $_POST['delete_todo']);
 
             // DELETE FROM DB

@@ -5,10 +5,6 @@ class GetTodos extends Dbc {
     protected function getAllTodos(){
 
         // CREATE TABLE IF NOT EXISTS
-        //$sql = "CREATE DATABASE IF NOT EXISTS foreo";
-        //$this->connect()->query($sql);
-
-        // CREATE TABLE IF NOT EXISTS
         $sql = "CREATE TABLE IF NOT EXISTS todo (
         id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id),
         description varchar(300) NOT NULL
