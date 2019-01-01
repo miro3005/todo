@@ -7,7 +7,6 @@ class ShowTodos extends GetTodos {
 
         if (is_array($datas)) {
         foreach ($datas as $data) {
-            //echo $data['id'];
             echo "<tr>";
             echo '<td>'.$data['id'].'</td>';
             echo '<td>'.$data['description'].'</td>';
