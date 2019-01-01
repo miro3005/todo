@@ -7,8 +7,6 @@ require('includes/addtodo.inc.php');
 require('includes/deletetodo.inc.php');
 
 $addtodo = new AddTodo;
-//$addtodo->addTodo();
-
 $deletetodo = new DeleteTodo;
 
 ?>
