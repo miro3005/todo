@@ -48,13 +48,19 @@ $deletetodo = new DeleteTodo;
       </tbody>
     </table>
 
+    <div class="w-50">
+        <h1 class="mt-5">Add New To Do</h1>
 
-    <h1>Add Todo</h1>
+        <form method="post">
+            <div class="input-group mb-3">
+                <input type="text" name="newtodo" class="form-control" placeholder="Enter new To Do here">
+                <div class="input-group-append">
+                    <button name="add_todo" style=float:right type="submit" class="btn btn-success">ADD NEW TO DO</button>
+                </div>
+            </div>
+        </form>
 
-    <form method="post">
-        <input type="text" name="newtodo" class="form-control" placeholder="Enter new ToDo here">
-        <button name="add_todo" style=float:right type="submit" class="btn btn-success">Add Todo</button>
-    </form>
+    </div>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
