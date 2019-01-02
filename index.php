@@ -1,16 +1,16 @@
 <?php
-
+//koristiti autoloading
 require('includes/dbc.inc.php');
 require('includes/gettodos.inc.php');
 require('includes/showtodos.inc.php');
 require('includes/addtodo.inc.php');
 require('includes/deletetodo.inc.php');
 
-$addtodo = new AddTodo;
+// koristi neki standard pisanja snake case ili preporučeni camel case addTodo
+$addTodo= new AddTodo();
 $deletetodo = new DeleteTodo;
 
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,6 +38,7 @@ $deletetodo = new DeleteTodo;
       </thead>
       <tbody>
       <form method="post">
+          <!-- mješanje html-a i php-a -->
             <?php
             $todos = new ShowTodos;
             $todos->showAllTodos();
