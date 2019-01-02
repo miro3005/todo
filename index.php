@@ -1,13 +1,16 @@
 <?php
 
 require('includes/dbc.inc.php');
-require('includes/gettodos.inc.php');
-require('includes/showtodos.inc.php');
-require('includes/addtodo.inc.php');
-require('includes/deletetodo.inc.php');
+require('includes/todo.inc.php');
 
-$addtodo = new AddTodo;
-$deletetodo = new DeleteTodo;
+$showAllTodos = new ToDo();
+
+$addTodo = new ToDo();
+$addTodo->addTodo();
+
+$deleteTodo = new ToDo();
+$deleteTodo->deleteTodo();
+
 
 ?>
 
@@ -39,8 +42,7 @@ $deletetodo = new DeleteTodo;
       <tbody>
       <form method="post">
             <?php
-            $todos = new ShowTodos;
-            $todos->showAllTodos();
+            $showAllTodos->showAllTodos();
             ?>
       </form>
       </tbody>
@@ -49,7 +51,7 @@ $deletetodo = new DeleteTodo;
     <div class="w-50">
         <h1 class="mt-5">Add New To Do</h1>
 
-        <form method="post">
+        <form method="post" action="index.php">
             <div class="input-group mb-3">
                 <input type="text" name="newtodo" class="form-control" placeholder="Enter new To Do here">
                 <div class="input-group-append">
