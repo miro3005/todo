@@ -3,14 +3,10 @@
 require('includes/dbc.inc.php');
 require('includes/todo.inc.php');
 
-$showAllTodos = new ToDo();
+$toDo = new ToDo();
 
-$addTodo = new ToDo();
-$addTodo->addTodo();
-
-$deleteTodo = new ToDo();
-$deleteTodo->deleteTodo();
-
+$toDo->addTodo();
+$toDo->deleteTodo();
 
 ?>
 
@@ -42,7 +38,7 @@ $deleteTodo->deleteTodo();
       <tbody>
       <form method="post">
             <?php
-            $showAllTodos->showAllTodos();
+                $toDo->showAllTodos();
             ?>
       </form>
       </tbody>
