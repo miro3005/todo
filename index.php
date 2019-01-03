@@ -5,8 +5,13 @@ require('includes/todo.inc.php');
 
 $toDo = new ToDo();
 
-$toDo->addTodo();
-$toDo->deleteTodo();
+if (isset($_POST['add_todo'])) {
+    $toDo->addTodo();
+}
+
+if (isset($_POST['delete_todo'])) {
+    $toDo->deleteTodo();
+}
 
 ?>
 
