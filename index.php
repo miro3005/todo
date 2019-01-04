@@ -42,9 +42,18 @@ if (isset($_POST['delete_todo'])) {
       </thead>
       <tbody>
       <form method="post">
-            <?php
-                $toDo->showAllTodos();
-            ?>
+          <?php
+          $datas = $toDo -> showAllTodos();
+          if (is_array($datas)) {
+              foreach ($datas as $data) {
+                  echo "<tr>";
+                  echo '<td>'.$data['id'].'</td>';
+                  echo '<td>'.$data['description'].'</td>';
+                  echo '<td><button name="delete_todo" value="'.$data['id'].'" type="submit" class="btn btn-danger">Delete</button></td>';
+                  echo "</tr>";
+              }
+          }
+          ?>
       </form>
       </tbody>
     </table>
